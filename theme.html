@@ -1,0 +1,48 @@
+<html>
+<head>
+   <style>
+      body {
+         color: black;
+         background-color: rgb(241, 241, 241);
+         text-align: center;
+         justify-content: center;
+      }
+      .dark-theme {
+         color: white;
+         background-color: rgb(26, 20, 20);
+      }
+      button {
+         width: 13rem;
+         height: 2rem;
+         font-size: 1.5rem;
+         background-color: aqua;
+         border: none;
+         border-radius: 12px;
+      }
+      p {
+         font-size: 1.2rem;
+      }
+   </style>
+</head>
+<body>
+   <h2>Using the <i> toggle method to </i> toggle between light and dark mode in JavaScript. </h2>
+   <p>This is the content of the webpage. </p>
+   <button onclick = "changeMode()" id = "button"> Dark Mode </button>
+   <script>
+      function changeMode() {
+         var body = document.body;
+         
+         // toggle the theme
+         body.classList.toggle("dark-theme");
+         let button = document.getElementById('button');
+         
+         // change the button text
+         if (button.innerHTML == "Dark Mode") {
+            button.innerHTML = "Normal Mode";
+         } else {
+            button.innerHTML = "Dark Mode"
+         }
+      }
+   </script>
+</body>
+</html>
